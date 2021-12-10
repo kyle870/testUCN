@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+    <title>Test Practico</title>
+</head>
+
+<body>
+    <div>
+        <p>Ejercicio 3</p>
+        <input id="tiempo" type="text" value="07:05:21 PM">
+        <p id="hora"></p>
+        <button id="btnConvert" onclick="convertedTime()">Convertir</button>
+    </div>
+    <hr class="solid">
+    <div>
+        <p>Ejercicio 2</p>
+        <p id="elementos"></p>
+        <p id="array"></p>
+    </div>
+</body>
+<script>
+    function convertedTime() {
+        let tiempo12 = document.getElementById("tiempo").value;
+
+        let convertedTime = moment(tiempo12, 'hh:mm:ss A').format('HH:mm:ss')
+        console.log(convertedTime);
+        document.getElementById('hora').innerHTML = convertedTime;
+    }
+
+
+        const arr = [1, 8, 5, 7, 15];
+        
+        let sum = 0;
+        let min = Infinity;
+        let max = -Infinity;
+
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            sum += element;
+
+            if (element > max) {
+                max = element;
+            }
+            if (element < min) {
+                min = element;
+            }
+        }
+
+        document.getElementById('elementos').innerHTML = arr;
+        document.getElementById('array').innerHTML = `${sum-max}  ${sum-min}`;
+
+
+</script>
+
+</html>
