@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
-    <title>Test Practico</title>
+    <title>Test UCN</title>
 </head>
 
 <body>
@@ -21,6 +21,12 @@
         <p>Ejercicio 2</p>
         <p id="elementos"></p>
         <p id="array"></p>
+    </div>
+    <hr class="solid">
+    <div>
+        <p>Ejercicio 1</p>
+        <p id="arreglo"></p>
+        <p id="elemDec"></p>
     </div>
 </body>
 <script>
@@ -56,7 +62,32 @@
     document.getElementById('elementos').innerHTML = arr;
     document.getElementById('array').innerHTML = `${sum - max}  ${sum - min}`;
 
+    //Ejercicio 1
+    const arrayEj = [1, -1, 0, -2, -1]
+    let counterpositive = 0, counternegative = 0, counterzero = 0;
 
+    for (let i = 0; i < arrayEj.length; i++) {
+        const elemento = arrayEj[i];
+
+        if (elemento == 0) {
+            counterzero++;
+        }
+
+        if (elemento < 0) {
+            counternegative++;
+        }
+
+        if (elemento > 0) {
+            counterpositive++;
+        }
+    }
+
+    let cocientePositivo = (counterpositive / arrayEj.length).toFixed(6);
+    let cocienteZero = (counterzero / arrayEj.length).toFixed(6);
+    let cocienteNegativo = (counternegative / arrayEj.length).toFixed(6);
+
+    document.getElementById("arreglo").innerHTML = arrayEj;
+    document.getElementById("elemDec").innerHTML = `Cociente Positivo: ${cocientePositivo} <br> Cociente Cero: ${cocienteZero} <br> Cociente Negativo: ${cocienteNegativo}`;
 </script>
 
 </html>
