@@ -24,6 +24,7 @@
     </div>
 </body>
 <script>
+    //Ejercicio 3
     function convertedTime() {
         let tiempo12 = document.getElementById("tiempo").value;
 
@@ -33,26 +34,27 @@
     }
 
 
-        const arr = [1, 8, 5, 7, 15];
-        
-        let sum = 0;
-        let min = Infinity;
-        let max = -Infinity;
+    //Ejercicio 2
+    const arr = [1, 8, 5, 7, 15];
 
-        for (let i = 0; i < arr.length; i++) {
-            const element = arr[i];
-            sum += element;
+    let sum = 0;
+    let min = Infinity;
+    let max = -Infinity;
 
-            if (element > max) {
-                max = element;
-            }
-            if (element < min) {
-                min = element;
-            }
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        sum += element;
+
+        if (element > max) {
+            max = element;
         }
+        if (element < min) {
+            min = element;
+        }
+    }
 
-        document.getElementById('elementos').innerHTML = arr;
-        document.getElementById('array').innerHTML = `${sum-max}  ${sum-min}`;
+    document.getElementById('elementos').innerHTML = arr;
+    document.getElementById('array').innerHTML = `${sum - max}  ${sum - min}`;
 
 
 </script>
